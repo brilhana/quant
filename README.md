@@ -1,0 +1,3 @@
+# Quant
+
+### Assorted trading algorithms.
