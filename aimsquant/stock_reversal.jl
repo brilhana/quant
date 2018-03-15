@@ -56,7 +56,7 @@ function ondata(data, state)
 	rets = [colnames(prices) vec(values(returnsTA))]
 
 	# Sorted returns
-	sortedrets = sortrows(rets, by=x->(x[2]))
+	sortedrets = sortrows(rets, by = x -> (x[2]))
 
 	# Get 5 names with lowest retursn
 	topnames = sortedrets[1:5, 1]
@@ -71,8 +71,8 @@ function ondata(data, state)
 	end
 
 	# Create momemtum portfolio
-	for (i,stock) in enumerate(topnames)
-		setholdingpct(stock, 1.0/length(topnames))
+	for (i, stock) in enumerate(topnames)
+		setholdingpct(stock, 1.0 / length(topnames))
 	end
 
 	# Track the portfolio value
